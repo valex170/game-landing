@@ -1,0 +1,101 @@
+.slider {
+    position: relative;
+    width: 502px;
+    height: 610px;
+    margin-bottom: 20px;
+    perspective: 1000px;
+}
+
+.poster {
+    position: absolute;
+    width: 438px;
+    height: 563px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease, opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
+    transform-origin: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.poster.active {
+    width: 502px;
+    height: 610px;
+    z-index: 10;
+}
+
+.poster.behind {
+    opacity: 0;
+}
+
+.slide-btn {
+    position: absolute;
+    right: -130px;
+    top: 270px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.triangle2 {
+    position: relative;
+    width: 0;
+    height: 0;
+}
+.line2 {
+    position: absolute;
+    width: 5px;
+    height: 0;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.triangle2 .line2:nth-child(1) {
+    top: -37px;
+    left: -7px;
+    height: 25px;
+    transform: rotate(135deg);
+    transform-origin: bottom left;
+}
+.triangle2 .line2:nth-child(2) {
+    top: -18px;
+    left: 11px;
+    height: 25px;
+    transform: rotate(-135deg);
+    transform-origin: bottom left;
+}
+.triangle2 .line2:nth-child(3) {
+    top: -11px;
+    left: -10px;
+    height: 35px;
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+}
+
+
+.pagination {
+    display: flex;
+    width: 100px;
+    position: absolute;
+    bottom: 70px;
+    left: 170px;
+}
+
+.pagination-button {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 52px;
+    /* position: absolute;
+    top: -5.5em;
+    left: 7em; */
+}
+
+.pagination-button.active {
+    background-color: #fff;
+}
+
+
